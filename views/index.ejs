@@ -10,7 +10,10 @@
     <h1>index</h1>
     <ul>
         <% for(let i = 0; i < albums.length; i++) { %>
-            <a href="/albums/<%=albums[i].id%>"><%=albums[i].name; %></a>
+            <li>
+                <a href="/albums/<%=albums[i].id%>"><%=albums[i].name; %></a> By- <a href="/artists/"><%=albums[i].artist; %></a>
+            </li>
+            
         <% } %>
     </ul>
     
