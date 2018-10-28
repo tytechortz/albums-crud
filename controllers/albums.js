@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
            console.log(err);
        } else {
            console.log(allAlbums)
-           res.render('index.ejs', {albums: allAlbums});
+           res.render('./albums/index.ejs', {albums: allAlbums});
        }
    });
 });
