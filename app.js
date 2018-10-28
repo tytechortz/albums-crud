@@ -8,7 +8,7 @@ require('./db/db');
 
 
 const albumRoutes = require('./controllers/albums');
-const artistRoutes = require('/controllers/artists')
+const artistRoutes = require('./controllers/artists')
 
 
 app.use(morgan('dev'));
