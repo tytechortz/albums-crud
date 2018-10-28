@@ -8,6 +8,7 @@ require('./db/db');
 
 
 const albumRoutes = require('./controllers/albums');
+const artistRoutes = require('/controllers/artists')
 
 
 app.use(morgan('dev'));
@@ -26,6 +27,7 @@ app.use(bodyParser.json());
 // });
 
 app.use('/albums', albumRoutes);
+app.use('/artists', artistRoutes);
 
 
 app.use(( rew, res, next) => {
