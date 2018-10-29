@@ -45,8 +45,11 @@ router.get('/new', (req, res) => {
 });
 
 router.get('/:albumId', (req, res) => {
-    const id = req.params.albumId;
-    res.send('found id');
+    Albums.findById(req.params.albumId, (err, foundAlbum) => {
+        res.render('albums/show.ejs', {
+            album: foundAlbum
+        });
+    });
 });
 
 router.put('/:albumId', (req, res) => {
