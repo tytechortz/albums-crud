@@ -57,7 +57,10 @@ router.put('/:albumId', (req, res) => {
 });
 
 router.delete('/:albumId', (req, res) => {
-    res.send('deleted album');
+    console.log(req.params.albumId, ' id in delete route');
+    Albums.findByIdAndDelete(req.params.albumId, (err, deletedAlbum) => {
+    res.redirect('/albums')
+    });
 });
 
 // router.post('/', (req, res) => {

@@ -3,6 +3,8 @@ const app = express();
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const mongoose = require("mongoose");
+const methodOverride = require('method-override');
+
 
 require('./db/db');
 
@@ -14,6 +16,7 @@ const artistRoutes = require('./controllers/artists')
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
+app.use(methodOverride('_method'));
 
 // app.use((req, res, next) => {
 //     res.header('Access-Control-Allow-Origin', '*');
