@@ -41,7 +41,7 @@ router.post('/', (req, res) => {
 // });
 
 router.get('/new', (req, res) => {
-    res.render('new.ejs');
+    res.render('albums/new.ejs');
 });
 
 router.get('/:albumId', (req, res) => {
